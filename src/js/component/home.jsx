@@ -1,26 +1,20 @@
 import React from "react";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
 
-//create your first component
-const Home = () => {
-	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
-};
+function  Home ({ number }) {
+    return(
+        <div className="App" >
+        <div style={{display:"flex"}}>
+            <h2>{number.charAt(0)}</h2>
+            <h2>{number.charAt(1)}</h2>
+            <h2>{number.charAt(2)}</h2>
+            <h2>{number.charAt(3)}</h2>
+            <h2>{number.charAt(4)}</h2>
+            <h2>{number.charAt(5)}</h2>
+        </div>    
+        </div>
+    )
+
+}
 
 export default Home;

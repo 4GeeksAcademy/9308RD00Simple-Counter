@@ -9,5 +9,14 @@ import "../styles/index.css";
 import Home from "./component/home.jsx";
 
 //render your react application
-ReactDOM.createRoot(document.getElementById('app')).render(<Home/>);
 
+
+var counter = 0;
+const someFunc = () => {
+    counter++;
+    var numString = "00000" + counter;
+    numString = numString.slice(-6);
+    
+    ReactDOM.createRoot(document.getElementById('app')).render(<Home number={numString}/>);
+}
+setInterval(someFunc, 1000);
